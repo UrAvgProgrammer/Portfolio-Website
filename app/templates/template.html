@@ -14,16 +14,22 @@
 
     <!-- Bootstrap CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/landing-page.css') }}" rel="stylesheet">
     {% endblock %}
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>UrAvgProgrammer</title>
   </head>
 
-  <body>
+  <body class="d-flex h-100 text-center text-white bg-dark">
     {% block body %}
     {% endblock %}
 
+    {% block js %}
     <!-- Bootstrap Javascript -->
     <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.bundle.js') }}"></script>
+
+    <!-- fa -->
+    <script src="https://kit.fontawesome.com/6f2063b615.js" crossorigin="anonymous"></script>
+    {% endblock %}
   </body>
 </html>
