@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Fauna One
+- Font Author: Copyright (c) 2013, Eduardo Tunni (http://www.tipo.net.ar edu@tipo.net.ar), with Reserved Font Name 'Fauna'
+- Font Source: http://fonts.gstatic.com/s/faunaone/v8/wlpzgwTPBVpjpCuwkuEx2UxLYClOCg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
