@@ -21,9 +21,39 @@
   </head>
 
   <body class="d-flex h-100 text-center text-white bg-dark">
-    {% block body %}
-    {% endblock %}
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Jerald Talledo</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            {% if url_for(request.endpoint) == url_for('index') %}
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index')}}">Home</a>
+            {% else %}
+            <a class="nav-link" href="{{ url_for('index')}}">Home</a>
+            {% endif %}
 
+            {% if url_for(request.endpoint) == url_for('projects') %}
+            <a class="nav-link active" aria-current="page" href="{{ url_for('projects') }}">Projects</a>
+            {% else %}
+            <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+            {% endif %}
+
+            {% if url_for(request.endpoint) == url_for('contact') %}
+            <a class="nav-link active" aria-current="page" href="{{ url_for('contact') }}">Contact</a>
+            {% else %}
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+            {% endif %}
+          </nav>
+        </div>
+      </header>
+        {% block body %}
+        {% endblock %}
+      <footer class="mt-auto text-white-50 fixed-bottom">
+        <a href="https://github.com/UrAvgProgrammer" class="text-white"><i class="fab fa-github"></i> Github</a>
+        <a href="https://gitlab.com/jrldtlld" class="text-white"><i class="fab fa-gitlab"></i> Gitlab</a>
+        <a href="https://www.linkedin.com/in/jerald-talledo-4a0016167" class="text-white"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </footer>
+    </div>
     {% block js %}
     <!-- Bootstrap Javascript -->
     <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.bundle.js') }}"></script>
